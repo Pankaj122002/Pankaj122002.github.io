@@ -724,17 +724,18 @@
         <span class="skill-tag">C#</span>
         <span class="skill-tag">Python</span>
         <span class="skill-tag">SQL</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">AJAX</span>
-        <span class="skill-tag">jQuery</span>
+        <span class="skill-tag">JavaScript(AJAX, jQuery)</span>
+        <span class="skill-tag">TypeScript</span>
       </div>
     </div>
     <div class="skill-card reveal">
-      <div class="skill-category">Frameworks & Backend</div>
+      <div class="skill-category">Frameworks</div>
       <div class="skill-tags">
         <span class="skill-tag">.NET Framework</span>
         <span class="skill-tag">ASP.NET Web API</span>
         <span class="skill-tag">ASP.NET MVC</span>
+        <span class="skill-tag">Web Forms</span>
+        <span class="skill-tag">Angular 21</span>
         <span class="skill-tag">Entity Framework</span>
         <span class="skill-tag">ADO.NET</span>
       </div>
@@ -756,6 +757,9 @@
         <span class="skill-tag">CSS</span>
         <span class="skill-tag">ECharts</span>
         <span class="skill-tag">Streamlit</span>
+        <span class="skill-tag">Bootstrap</span>
+        <span class="skill-tag">Angular Material</span>
+        <span class="skill-tag">Chart.js</span>
       </div>
     </div>
     <div class="skill-card reveal">
@@ -776,6 +780,7 @@
         <span class="skill-tag">Visual Studio</span>
         <span class="skill-tag">Git / GitHub</span>
         <span class="skill-tag">Google Colab</span>
+        <span class="skill-tag">Cypress</span>
         <span class="skill-tag">GitHub Copilot</span>
         <span class="skill-tag">Claude AI</span>
         <span class="skill-tag">ChatGPT</span>
@@ -890,6 +895,42 @@
   </div>
   <div class="projects-grid">
     <div class="project-card">
+      <div class="project-icon">📋</div>
+      <div class="project-name">MyFormApp</div>
+      <div class="project-type">ASP.NET Core MVC · Web Application</div>
+      <ul class="project-bullets">
+        <li>Built a form-handling web app using ASP.NET Core MVC 8.0 with strict Data Annotations validation ([Required], [EmailAddress], [Phone], [StringLength]) enforced on both client and server side.</li>
+        <li>Implemented the PRG (Post/Redirect/Get) pattern to prevent duplicate form submissions; used TempData with System.Text.Json serialization to persist validated data across the redirect.</li>
+        <li>Designed a responsive glassmorphism UI using Bootstrap, custom CSS animations, and Razor tag helpers.</li>
+      </ul>
+      <span class="project-acc">C# · ASP.NET Core MVC 8.0 · Razor Views · Bootstrap</span>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">💼</div>
+      <div class="project-name">Enterprise Expense Tracker</div>
+      <div class="project-type">Angular · Frontend SPA</div>
+      <ul class="project-bullets">
+        <li>Developed a full-featured expense tracking SPA using Angular 21 with standalone components, Angular Material UI controls, and Chart.js (ng2-charts) for real-time category and monthly trend dashboards.</li>
+        <li>Implemented full CRUD with Angular Reactive Forms, real-time validations, smart search &amp; filtering, and localStorage-based persistence — zero backend required.</li>
+        <li>Configured end-to-end test coverage using Cypress and unit tests with Vitest.</li>
+      </ul>
+      <span class="project-acc">Angular 21 · TypeScript · Angular Material · RxJS · Cypress</span>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">🎓</div>
+      <div class="project-name">Student Registration Portal</div>
+      <div class="project-type">ASP.NET Web Forms · .NET Framework</div>
+      <ul class="project-bullets">
+        <li>Built a student registration portal using ASP.NET Web Forms (.NET Framework 4.8) with server-side validation via ASP.NET validator controls and XSS protection using Server.HtmlEncode() on all user inputs.</li>
+        <li>Architected using Master Pages for shared layout and Panel-based view switching within a single page leveraging the PostBack and event-driven model.</li>
+        <li>Designed a 634-line CSS system featuring dark glassmorphism theme, animated floating orbs, staggered entrance animations, gradient buttons with shimmer, and full mobile responsiveness.</li>
+      </ul>
+      <span class="project-acc">C# · ASP.NET Web Forms · .NET 4.8 · IIS Express</span>
+    </div>
+
+    <div class="project-card">
       <div class="project-icon">🩺</div>
       <div class="project-name">Diabetes Prediction</div>
       <div class="project-type">Machine Learning · Classification</div>
@@ -913,6 +954,8 @@
       </ul>
       <span class="project-acc">88% Accuracy · Streamlit</span>
     </div>
+
+    
   </div>
 </section>
 
