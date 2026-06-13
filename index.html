@@ -524,24 +524,26 @@
   /* ── CERTIFICATIONS ── */
   .certs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    width: 100%;
   }
   .cert-card {
     border: 1px solid var(--border);
     border-radius: 6px;
-    padding: 1.2rem 1.5rem;
+    padding: 1.5rem 1.5rem;
     display: flex; align-items: flex-start; gap: .9rem;
     background: rgba(255,255,255,.02);
     transition: background var(--trans), border-color var(--trans), transform var(--trans);
     opacity: 0; transform: scale(.95);
     transition: opacity .5s, transform .5s, background .35s, border-color .35s;
+    width: 100%; box-sizing: border-box;
   }
   .cert-card.visible { opacity: 1; transform: scale(1); }
   .cert-card:hover { background: rgba(201,168,76,.06); border-color: rgba(201,168,76,.35); transform: translateY(-2px); }
-  .cert-icon { color: var(--gold); font-size: 1.1rem; margin-top: .1rem; flex-shrink: 0; }
-  .cert-title { font-size: .9rem; color: var(--text); font-weight: 400; line-height: 1.4; }
-  .cert-by { font-size: .75rem; color: var(--muted); margin-top: .2rem; }
+  .cert-icon { color: var(--gold); font-size: 1.2rem; margin-top: .1rem; flex-shrink: 0; }
+  .cert-title { font-size: 1rem; color: var(--text); font-weight: 400; line-height: 1.4; }
+  .cert-by { font-size: .8rem; color: var(--muted); margin-top: .25rem; }
 
   /* ── EXTRA CURRICULAR ── */
   .extras-grid {
