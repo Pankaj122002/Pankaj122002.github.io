@@ -64,6 +64,47 @@
     opacity: .6;
   }
 
+  /* ── ANIMATED GRADIENT BACKGROUND ── */
+  .bg-anim {
+    position: fixed; inset: 0; z-index: -1;
+    overflow: hidden; pointer-events: none;
+  }
+  .bg-anim span {
+    position: absolute; border-radius: 50%;
+    filter: blur(90px); opacity: .35;
+    mix-blend-mode: screen;
+    animation: float 22s ease-in-out infinite;
+  }
+  .bg-anim span:nth-child(1) {
+    width: 480px; height: 480px; top: -10%; left: -10%;
+    background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+    animation-duration: 26s;
+  }
+  .bg-anim span:nth-child(2) {
+    width: 420px; height: 420px; bottom: -15%; right: -10%;
+    background: radial-gradient(circle, #3a5fc9 0%, transparent 70%);
+    animation-duration: 30s; animation-delay: -8s;
+  }
+  .bg-anim span:nth-child(3) {
+    width: 360px; height: 360px; top: 40%; left: 60%;
+    background: radial-gradient(circle, var(--gold3) 0%, transparent 70%);
+    animation-duration: 24s; animation-delay: -4s;
+  }
+  .bg-anim span:nth-child(4) {
+    width: 300px; height: 300px; top: 65%; left: 10%;
+    background: radial-gradient(circle, #7a4ec9 0%, transparent 70%);
+    animation-duration: 28s; animation-delay: -14s;
+  }
+  @keyframes float {
+    0%, 100% { transform: translate(0,0) scale(1); }
+    25%      { transform: translate(60px,-40px) scale(1.1); }
+    50%      { transform: translate(-30px,50px) scale(.95); }
+    75%      { transform: translate(40px,30px) scale(1.05); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .bg-anim span { animation: none; }
+  }
+
   /* ── GRAIN OVERLAY ── */
   body::before {
     content: '';
@@ -650,6 +691,9 @@
 </head>
 <body>
 
+<!-- ANIMATED BACKGROUND -->
+<div class="bg-anim"><span></span><span></span><span></span><span></span></div>
+
 <!-- CURSOR -->
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
@@ -935,6 +979,18 @@
         <li>Configured end-to-end test coverage using Cypress and unit tests with Vitest.</li>
       </ul>
       <span class="project-acc">Angular 21 · TypeScript · Angular Material · RxJS · Cypress</span>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">🍢</div>
+      <div class="project-name">Biryani Ordering Website</div>
+      <div class="project-type">Angular · Frontend SPA</div>
+      <ul class="project-bullets">
+        <li>Developed a responsive, high-performance single-page application (SPA) using Angular 19+, TypeScript, and RxJS. Designed a modern, glassmorphic UI with Bootstrap 5 and Vanilla CSS, and optimized load times via lazy-loaded standalone components.</li>
+        <li>Engineered a centralized, reactive shopping cart system driven by RxJS BehaviorSubject streams to dynamically compute cart totals and item quantities in real-time. Built a floating sticky cart bar and an SEO service that dynamically updates page metadata and OpenGraph tags during route transitions.</li>
+        <li>Integrated the WhatsApp API to streamline checkout, automatically formatting order data into structured messages for the restaurant owner. Ensured reliability with a comprehensive E2E test suite (Cypress) and CI/CD deployment pipeline via Vercel.</li>
+      </ul>
+      <span class="project-acc">Angular 19+ · TypeScript · RxJS · Bootstrap 5 · CSS3 · Cypress · WhatsApp API · Vercel · Git/GitHub</span>
     </div>
 
     <div class="project-card">
